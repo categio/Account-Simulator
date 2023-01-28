@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.depositGroupBox = new System.Windows.Forms.GroupBox();
-            this.depositAmountDescriptionLabel = new System.Windows.Forms.Label();
-            this.depositTextBox = new System.Windows.Forms.TextBox();
             this.depositButton = new System.Windows.Forms.Button();
+            this.depositTextBox = new System.Windows.Forms.TextBox();
+            this.depositAmountDescriptionLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.withdrawButton = new System.Windows.Forms.Button();
             this.withdrawTextBox = new System.Windows.Forms.TextBox();
@@ -55,22 +55,6 @@
             this.depositGroupBox.TabStop = false;
             this.depositGroupBox.Text = "Make a Deposit";
             // 
-            // depositAmountDescriptionLabel
-            // 
-            this.depositAmountDescriptionLabel.AutoSize = true;
-            this.depositAmountDescriptionLabel.Location = new System.Drawing.Point(16, 23);
-            this.depositAmountDescriptionLabel.Name = "depositAmountDescriptionLabel";
-            this.depositAmountDescriptionLabel.Size = new System.Drawing.Size(46, 13);
-            this.depositAmountDescriptionLabel.TabIndex = 0;
-            this.depositAmountDescriptionLabel.Text = "Amount:";
-            // 
-            // depositTextBox
-            // 
-            this.depositTextBox.Location = new System.Drawing.Point(68, 20);
-            this.depositTextBox.Name = "depositTextBox";
-            this.depositTextBox.Size = new System.Drawing.Size(67, 20);
-            this.depositTextBox.TabIndex = 1;
-            // 
             // depositButton
             // 
             this.depositButton.Location = new System.Drawing.Point(38, 46);
@@ -79,6 +63,23 @@
             this.depositButton.TabIndex = 2;
             this.depositButton.Text = "Deposit";
             this.depositButton.UseVisualStyleBackColor = true;
+            this.depositButton.Click += new System.EventHandler(this.depositButton_Click);
+            // 
+            // depositTextBox
+            // 
+            this.depositTextBox.Location = new System.Drawing.Point(68, 20);
+            this.depositTextBox.Name = "depositTextBox";
+            this.depositTextBox.Size = new System.Drawing.Size(67, 20);
+            this.depositTextBox.TabIndex = 1;
+            // 
+            // depositAmountDescriptionLabel
+            // 
+            this.depositAmountDescriptionLabel.AutoSize = true;
+            this.depositAmountDescriptionLabel.Location = new System.Drawing.Point(16, 23);
+            this.depositAmountDescriptionLabel.Name = "depositAmountDescriptionLabel";
+            this.depositAmountDescriptionLabel.Size = new System.Drawing.Size(46, 13);
+            this.depositAmountDescriptionLabel.TabIndex = 0;
+            this.depositAmountDescriptionLabel.Text = "Amount:";
             // 
             // groupBox1
             // 
@@ -100,6 +101,7 @@
             this.withdrawButton.TabIndex = 2;
             this.withdrawButton.Text = "Withdraw";
             this.withdrawButton.UseVisualStyleBackColor = true;
+            this.withdrawButton.Click += new System.EventHandler(this.withdrawButton_Click);
             // 
             // withdrawTextBox
             // 
@@ -143,6 +145,7 @@
             this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // Form1
             // 
@@ -156,6 +159,7 @@
             this.Controls.Add(this.depositGroupBox);
             this.Name = "Form1";
             this.Text = "Account Simulator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.depositGroupBox.ResumeLayout(false);
             this.depositGroupBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
